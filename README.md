@@ -98,6 +98,6 @@ Every /chat response follows this exact schema:
   "end_of_conversation": false
 }
 ```
-. recommendations is empty when clarifying
-. recommendations has 1-10 items when shortlist is ready
-. end_of_conversation is true only when task is complete
+- recommendations is empty when clarifying
+- recommendations has 1-10 items when shortlist is ready
+- end_of_conversation is true only when task is complete
