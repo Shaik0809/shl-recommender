@@ -1,3 +1,9 @@
+
+## 🚀 Live Demo
+
+Test the API here: https://shl-recommender-wziv.onrender.com/docs
+Health Check: https://shl-recommender-wziv.onrender.com/health
+
 ## SHL Assessment Recommender
 A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
 ## Live API
