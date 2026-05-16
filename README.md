@@ -1,7 +1,7 @@
 ## SHL Assessment Recommender
 A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
 ## Live API
-## Base URL:https://shl-recommender-wziv.onrender.com
+## Base URL: https://shl-recommender-wziv.onrender.com
 ## Endpoint	Method	Description
 `/health`	GET	Returns `{"status": "ok"}`
 `/chat`	        POST	Conversational assessment recommender
@@ -38,19 +38,21 @@ POST /chat
 }
 ```
 ## Agent Behaviors
-# Behavior	            Example
-Clarify vague queries	  "I need an assessment" → asks what role
-Recommend tests	          "Hiring Java dev" → gives 1-10 tests
-Refine recommendations	  "Also add personality tests" → updates list
-Compare tests	          "Difference between OPQ32 and Java test?"
-Refuse off-topic	  "What salary should I offer?" → politely refuses
+| Behavior | Example |
+|----------|---------|
+| Clarify vague queries | "I need an assessment" → asks what role |
+| Recommend tests | "Hiring Java dev" → gives 1-10 tests |
+| Refine recommendations | "Also add personality tests" → updates list |
+| Compare tests | "Difference between OPQ32 and Java test?" |
+| Refuse off-topic | "What salary should I offer?" → politely refuses |
 ## Test Types
-# Code	Meaning
-A	Ability / Aptitude
-P	Personality / Behaviour
-K	Knowledge / Skills
-S	Situational Judgment
-C	Competency
+| Code | Meaning |
+|------|---------|
+| A | Ability / Aptitude |
+| P | Personality / Behaviour |
+| K | Knowledge / Skills |
+| S | Situational Judgment |
+| C | Competency |
 ## Project Structure
 ```
 shl-recommender/
