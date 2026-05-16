@@ -1,10 +1,10 @@
-### SHL Assessment Recommender
-## A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
-Live API
-Base URL: https://shl-recommender-wziv.onrender.com
-Endpoint	Method	Description
+## SHL Assessment Recommender
+A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
+## Live API
+## Base URL:https://shl-recommender-wziv.onrender.com
+## Endpoint	Method	Description
 `/health`	GET	Returns `{"status": "ok"}`
-`/chat`	POST	Conversational assessment recommender
+`/chat`	        POST	Conversational assessment recommender
 ## How It Works
 ```
 User message comes in
@@ -19,8 +19,8 @@ Groq AI picks best ones
         ↓
 JSON reply goes back
 ```
-Example
-Request:
+## Example
+## Request:
 ```json
 POST /chat
 {
@@ -29,7 +29,7 @@ POST /chat
   ]
 }
 ```
-Response:
+## Response:
 ```json
 {
   "reply": "What seniority level are you hiring for?",
@@ -38,7 +38,7 @@ Response:
 }
 ```
 ## Agent Behaviors
-Behavior	            Example
+# Behavior	            Example
 Clarify vague queries	  "I need an assessment" → asks what role
 Recommend tests	          "Hiring Java dev" → gives 1-10 tests
 Refine recommendations	  "Also add personality tests" → updates list
@@ -67,7 +67,7 @@ FastAPI	                API framework
 Groq (LLaMA 3.3 70B)	Free AI model
 BM25 Search	        Find relevant tests from catalog
 Render.com	        Free hosting
-Run Locally
+## Run Locally
 ```bash
 # Install libraries
 pip install -r requirements.txt
@@ -81,7 +81,7 @@ uvicorn main:app --reload
 # Test it
 # Open http://127.0.0.1:8000/docs
 ```
-API Schema
+## API Schema
 Every /chat response follows this exact schema:
 ```json
 {
