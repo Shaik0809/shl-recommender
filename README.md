@@ -1,11 +1,11 @@
-SHL Assessment Recommender
-A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
+### SHL Assessment Recommender
+## A conversational AI agent that recommends SHL Individual Test Solutions based on job requirements.
 Live API
 Base URL: https://shl-recommender-wziv.onrender.com
 Endpoint	Method	Description
 `/health`	GET	Returns `{"status": "ok"}`
 `/chat`	POST	Conversational assessment recommender
-How It Works
+## How It Works
 ```
 User message comes in
         ↓
@@ -37,21 +37,21 @@ Response:
   "end_of_conversation": false
 }
 ```
-Agent Behaviors
-Behavior	Example
-Clarify vague queries	"I need an assessment" → asks what role
-Recommend tests	"Hiring Java dev" → gives 1-10 tests
-Refine recommendations	"Also add personality tests" → updates list
-Compare tests	"Difference between OPQ32 and Java test?"
-Refuse off-topic	"What salary should I offer?" → politely refuses
-Test Types
-Code	Meaning
+## Agent Behaviors
+Behavior	            Example
+Clarify vague queries	  "I need an assessment" → asks what role
+Recommend tests	          "Hiring Java dev" → gives 1-10 tests
+Refine recommendations	  "Also add personality tests" → updates list
+Compare tests	          "Difference between OPQ32 and Java test?"
+Refuse off-topic	  "What salary should I offer?" → politely refuses
+## Test Types
+# Code	Meaning
 A	Ability / Aptitude
 P	Personality / Behaviour
 K	Knowledge / Skills
 S	Situational Judgment
 C	Competency
-Project Structure
+## Project Structure
 ```
 shl-recommender/
     main.py          → FastAPI server (/health and /chat endpoints)
@@ -61,12 +61,12 @@ shl-recommender/
     data/
         catalog.json → 50 SHL Individual Test Solutions
 ```
-Tech Stack
-Tool	Purpose
-FastAPI	API framework
+## Tech Stack
+# Tool	                Purpose
+FastAPI	                API framework
 Groq (LLaMA 3.3 70B)	Free AI model
-BM25 Search	Find relevant tests from catalog
-Render.com	Free hosting
+BM25 Search	        Find relevant tests from catalog
+Render.com	        Free hosting
 Run Locally
 ```bash
 # Install libraries
@@ -96,6 +96,6 @@ Every /chat response follows this exact schema:
   "end_of_conversation": false
 }
 ```
-recommendations is empty when clarifying
-recommendations has 1-10 items when shortlist is ready
-end_of_conversation is true only when task is complete
+. recommendations is empty when clarifying
+. recommendations has 1-10 items when shortlist is ready
+. end_of_conversation is true only when task is complete
